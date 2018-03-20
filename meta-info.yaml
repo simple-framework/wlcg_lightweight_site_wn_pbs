@@ -1,0 +1,8 @@
+%YAML 1.2
+
+#General Component Desciption
+component : "WN-Pbs"
+schema: "wn-pbs-info"
+version : 2.5.13
+docker_hub_url : ""
+puppet_forge_url: ""

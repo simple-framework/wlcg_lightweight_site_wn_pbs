@@ -1,0 +1,97 @@
+mple configuration for WN + Torque client
+#
+
+WN_LIST=/root/wn-list.conf      # FIX: adjust the path as needed
+
+USERS_CONF=/root/users.conf	# FIX: adjust the path as needed
+GROUPS_CONF=/root/groups.conf	# FIX: adjust the path as needed
+
+SITE_NAME=MY-TEST-SITE		# official EGI site name to be decided later
+SITE_EMAIL=root@localhost
+
+BDII_HOST=lcg-bdii.cern.ch
+PX_HOST=myproxy.cern.ch
+
+CE_HOST=my-test-ce.cern.ch #test without, check for multiple ce’s
+
+CE_SMPSIZE="8"				# FIX... no of slots per wn, check multi core job slots
+
+
+BATCH_SERVER=$CE_HOST
+
+CE_CLOSE_SE="SE3"
+CE_CLOSE_SE3_ACCESS_POINT="/not/used"
+CE_CLOSE_SE3_HOST="not-used.some-domain"
+SE_LIST="$CE_CLOSE_SE3_HOST"
+SE_MOUNT_INFO_LIST="none"
+
+VO_SW_DIR=/opt/exp_soft
+
+VOS="alice dteam ops"
+QUEUES=$VOS
+
+ALICE_GROUP_ENABLE="alice /alice/ROLE=lcgadmin"
+VO_ALICE_DEFAULT_SE="not-used.some-domain"
+VO_ALICE_QUEUES="alice"
+VO_ALICE_STORAGE_DIR="/not/used"
+VO_ALICE_SW_DIR=.
+
+VO_ALICE_VOMS_SERVERS="\
+'vomss://lcg-voms2.cern.ch:8443/voms/alice?/alice/' \
+'vomss://voms2.cern.ch:8443/voms/alice?/alice/' \
+"
+VO_ALICE_VOMSES="\
+'alice lcg-voms2.cern.ch 15000 \
+/DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch alice 24' \
+'alice voms2.cern.ch 15000 \
+/DC=ch/DC=cern/OU=computers/CN=voms2.cern.ch alice 24' \
+"
+VO_ALICE_VOMS_CA_DN="\
+'/DC=ch/DC=cern/CN=CERN Grid Certification Authority' \
+'/DC=ch/DC=cern/CN=CERN Grid Certification Authority' \
+"
+
+DTEAM_GROUP_ENABLE="dteam /dteam/ROLE=lcgadmin"
+
+VO_DTEAM_SW_DIR=$VO_SW_DIR/dteam
+VO_DTEAM_DEFAULT_SE=dteam-se.some.domain	# LATER
+VO_DTEAM_STORAGE_DIR=/storage/dteam		# LATER
+
+VO_DTEAM_VOMS_SERVERS='vomss://voms.hellasgrid.gr:8443/voms/dteam?/dteam/'
+VO_DTEAM_VOMSES="\
+'dteam voms.hellasgrid.gr 15004 \
+/C=GR/O=HellasGrid/OU=hellasgrid.gr/CN=voms.hellasgrid.gr dteam 24' \
+'dteam voms2.hellasgrid.gr 15004 \
+/C=GR/O=HellasGrid/OU=hellasgrid.gr/CN=voms2.hellasgrid.gr dteam 24' \
+"
+VO_DTEAM_VOMS_CA_DN="\
+'/C=GR/O=HellasGrid/OU=Certification Authorities/CN=HellasGrid CA 2016' \
+'/C=GR/O=HellasGrid/OU=Certification Authorities/CN=HellasGrid CA 2016' \
+"
+
+OPS_GROUP_ENABLE="ops /ops/ROLE=lcgadmin"
+
+VO_OPS_SW_DIR=$VO_SW_DIR/ops
+VO_OPS_DEFAULT_SE=ops-se.some.domain		# LATER
+VO_OPS_STORAGE_DIR=/storage/ops			# LATER
+
+VO_OPS_VOMSES="\
+'ops lcg-voms2.cern.ch 15009 \
+/DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch ops 24' \
+'ops voms2.cern.ch 15009 \
+/DC=ch/DC=cern/OU=computers/CN=voms2.cern.ch ops 24' \
+"
+VO_OPS_VOMS_CA_DN="\
+'/DC=ch/DC=cern/CN=CERN Grid Certification Authority' \
+'/DC=ch/DC=cern/CN=CERN Grid Certification Authority' \
+"
+
+#
+# both of them should be used for making grid-mapfiles
+#
+
+VO_OPS_VOMS_SERVERS="\
+'vomss://voms2.cern.ch:8443/voms/ops?/ops/' \
+'vomss://lcg-voms2.cern.ch:8443/voms/ops?/ops/' \
+"
+
