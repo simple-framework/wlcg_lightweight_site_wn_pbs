@@ -1,4 +1,5 @@
-mple configuration for WN + Torque client
+#
+#Sample configuration for WN + Torque client
 #
 
 WN_LIST=/root/wn-list.conf      # FIX: adjust the path as needed
