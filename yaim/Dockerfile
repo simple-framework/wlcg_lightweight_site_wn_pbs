@@ -9,14 +9,14 @@ RUN yum install -y \
 	wget
 
 ####################
-#     UMD 3
+#     UMD 4
 ####################
 
 RUN yum install -y \
 	yum-priorities
 
 RUN yum install -y \
-http://repository.egi.eu/sw/production/umd/3/sl6/x86_64/updates/umd-release-3.14.4-1.el6.noarch.rpm
+http://repository.egi.eu/sw/production/umd/4/sl6/x86_64/updates/umd-release-4.1.3-1.el6.noarch.rpm
 
 ####################
 #    Torque
@@ -33,9 +33,9 @@ RUN echo -e 'protect=1\npriority=1' >> /etc/yum.repos.d/EGI-third-party.repo
 ################### 
 
 RUN yum -y install \ 
-	lcg-CA \
-        emi-wn \
-        emi-torque-client
+	ca-policy-egi-core \
+    emi-wn \
+    emi-torque-client
 
 # for compatibility between different versions...
 
@@ -45,5 +45,4 @@ RUN ln -s /var/spool/pbs /var/lib/torque
 VOLUME /wn-config
 
 # init script on launch
-# TODO script should be packaged within the image, using on mount point only for development purposes
 #ENTRYPOINT ["/wn-config/init.sh"]
