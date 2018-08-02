@@ -1,0 +1,10 @@
+- name: config_root_email
+
+  - file:
+      path: "{{ ROOT_EMAIL_FORWARD }}"
+
+  - lineinfile:
+      path: /root/.forward
+      line: "{{ address }}"
+      with_items: "{{ ROOT_EMAIL_FORWARD }}"
+        loop_var: "{{ address }}"

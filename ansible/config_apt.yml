@@ -1,0 +1,22 @@
+- name: config_apt
+
+  - yum:
+      name: apt
+      state: present
+
+  - file:
+      path: /etc/apt/sources.list.d/lcg.list
+      state: absent
+  
+  - lineinfile:
+      path: /etc/apt/sources.list.d/lcg-ca.list
+      line: "{{ CA_REPOSITORY }}"
+
+  - lineinfile:
+      path: /etc/apt/sources.list.d/lcg.list
+      line: "{{ source }}"
+
+  - debug:
+      msg: "Running apt-get --assume-yes -f install"
+
+  - shell: apt-get --assume-yes -f install
