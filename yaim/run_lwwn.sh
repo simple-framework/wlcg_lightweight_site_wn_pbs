@@ -8,7 +8,7 @@ case $i in
     IP="${i#*=}"
     shift # past argument=value
     ;;
-    --hostname=*)
+    --host=*)
     HOST="${i#*=}"
     shift # past argument=value
     ;;

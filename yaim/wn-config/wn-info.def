@@ -13,7 +13,7 @@ SITE_EMAIL=root@localhost
 BDII_HOST=lcg-bdii.cern.ch
 PX_HOST=myproxy.cern.ch
 
-CE_HOST=puppet-server.cern.ch #test without, check for multiple ce’s
+CE_HOST=my-test-ce.cern.ch  #test without, check for multiple ce’s
 
 CE_SMPSIZE="8"				# FIX... no of slots per wn, check multi core job slots
 
