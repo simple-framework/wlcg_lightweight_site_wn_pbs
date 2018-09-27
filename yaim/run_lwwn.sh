@@ -1,5 +1,6 @@
 #!/bin/bash
-# random comment to be removed later
+# Issue 6 - Receive 5 parameters in this order: ip container, hostname container, ip CREAM, hostname CREAM and docker swarm network name
+
 ipcontainer=$1
 hostnamecontainer=$2
 ipcream=$3
