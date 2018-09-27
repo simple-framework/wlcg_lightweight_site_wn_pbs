@@ -1,4 +1,5 @@
 #!/bin/bash
+# random comment to be removed later
 ipcontainer=$1
 hostnamecontainer=$2
 ipcream=$3
