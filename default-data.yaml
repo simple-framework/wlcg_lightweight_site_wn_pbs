@@ -1,19 +1,19 @@
 expected-from-site-level-config:
-    - &wn_list /root/wn-list.conf #SET
-    - &users_conf /root/users.conf #SET
-    - &groups_conf /root/groups.conf #SET
-    - &px_host myproxy.cern.ch
-    - &ce_host
+    - &pbs_default_var_wn_list /root/wn-list.conf #SET
+    - &pbs_default_var_users_conf /root/users.conf #SET
+    - &pbs_default_var_groups_conf /root/groups.conf #SET
+    - &pbs_default_var_px_host myproxy.cern.ch
+    - &pbs_default_var_ce_host
       - *pbs_runtime_var_ce_host
-    - &ce_smpsize 8
-    - &batch_server 
+    - &pbs_default_var_ce_smpsize 8
+    - &pbs_default_var_batch_server 
       - *pbs_runtime_var_ce_host
-    - &ce_close_se SE3
-    - &ce_close_se3_access_point /not/used
-    - &ce_close_se3_host not-used.some-domain
-    - &se_list str()
-      - *ce_close_se3_host
-    - &se_mount_info_list none
-    - &vo_sw_dir /opt/exp_soft
-    - &queues
+    - &pbs_default_var_ce_close_se SE3
+    - &pbs_default_var_ce_close_se3_access_point /not/used
+    - &pbs_default_var_ce_close_se3_host not-used.some-domain
+    - &pbs_default_var_se_list str()
+      - *pbs_default_var_ce_close_se3_host
+    - &pbs_default_var_se_mount_info_list none
+    - &pbs_default_var_vo_sw_dir /opt/exp_soft
+    - &pbs_default_var_queues
       - *pbs_runtime_var_queues
