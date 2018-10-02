@@ -1,5 +1,4 @@
-%YAML 1.2
-
+---
 #General Component Desciption
 component : "WN-Pbs"
 version : 2.5.13
