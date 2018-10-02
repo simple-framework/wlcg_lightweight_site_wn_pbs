@@ -4,10 +4,10 @@ expected-from-site-level-config:
     - &groups_conf /root/groups.conf #SET
     - &px_host myproxy.cern.ch
     - &ce_host
-      - *ce_host
+      - *pbs_runtime_var_ce_host
     - &ce_smpsize 8
     - &batch_server 
-      - *ce_host
+      - *pbs_runtime_var_ce_host
     - &ce_close_se SE3
     - &ce_close_se3_access_point /not/used
     - &ce_close_se3_host not-used.some-domain
@@ -16,4 +16,4 @@ expected-from-site-level-config:
     - &se_mount_info_list none
     - &vo_sw_dir /opt/exp_soft
     - &queues
-      - *queues
+      - *pbs_runtime_var_queues
