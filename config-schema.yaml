@@ -3,7 +3,7 @@ available-from-site-level-config:
     site_name: { type: str(), required: false, use_default: true}
     site_email: { type: str(), required: false, use_default: true}
     bdii_host: { type: str(), required: false, use_default: true}
-        vos: { type: yaml_object(), required: true, use_default: false }
+    vos: { type: yaml_object(), required: true, use_default: false }
 expected-from-site-level-config:
     wn_list: { type: str(), required: false, use_default: true}
     users_conf: { type: str(), required: false, use_default: true}
