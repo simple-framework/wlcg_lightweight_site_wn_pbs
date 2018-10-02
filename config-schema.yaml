@@ -1,42 +1,43 @@
-
-wn-pbs-info:
-    wn_list: str()
-    users_conf: str()
-    groups_conf: str()
-    site_name: str()
-    site_email: str()
-    bdii_host: str()
-    px_host: str()
-    ce_host: str()
-    ce_smpsize: str()
-    batch_server: str()
-    ce_close_se: str()
-    ce_close_se3_access_point: str()
-    ce_close_se3_host: str()
-    se_list: str()
-    se_mount_info_list: str()
-    vo_sw_dir: str()
-    vos: str()
-    queues: str()
-    alice_group_enable: str()
-    vo_alice_default_se: str()
-    vo_alice_queues: str()
-    vo_alice_storage_dir: str()
-    vo_alice_sw_dir: str()
-    vo_alice_voms_servers: str()
-    vo_alice_vomses: str()
-    vo_alice_voms_ca_dn: str()
-    dteam_group_enable: str()
-    vo_dteam_sw_dir: str()
-    vo_dteam_default_se: str()
-    vo_dteam_storage_dir: str()
-    vo_dteam_voms_servers: str()
-    vo_dteam_vomses: str()
-    vo_dteam_voms_ca_dn: str()
-    ops_group_enable: str()
-    vo_ops_sw_dir: str()
-    vo_ops_default_se: str()
-    vo_ops_storage_dir: str()
-    vo_ops_vomses: str()
-    vo_ops_voms_ca_dn: str()
-    vo_ops_voms_servers: str()
+---
+available-from-site-level-config:
+    site_name: { type: str(), required: false, use_default: true}
+    site_email: { type: str(), required: false, use_default: true}
+    bdii_host: { type: str(), required: false, use_default: true}
+        vos: { type: yaml_object(), required: true, use_default: false }
+expected-from-site-level-config:
+    wn_list: { type: str(), required: false, use_default: true}
+    users_conf: { type: str(), required: false, use_default: true}
+    groups_conf: { type: str(), required: false, use_default: true}
+    px_host: { type: str(), required: false, use_default: true}
+    ce_host: { type: str(), required: false, use_default: true}
+    ce_smpsize: { type: str(), required: false, use_default: true}
+    batch_server: { type: str(), required: false, use_default: true}
+    ce_close_se: { type: str(), required: false, use_default: true}
+    ce_close_se3_access_point: { type: str(), required: false, use_default: true}
+    ce_close_se3_host: { type: str(), required: false, use_default: true}
+    se_list: { type: str(), required: false, use_default: true}
+    se_mount_info_list: { type: str(), required: false, use_default: true}
+    vo_sw_dir: { type: str(), required: false, use_default: true}
+    queues: { type: str(), required: false, use_default: true}
+    # alice_group_enable: { type: str(), required: false, use_default: true}
+    # vo_alice_default_se: { type: str(), required: false, use_default: true}
+    # vo_alice_queues: { type: str(), required: false, use_default: true}
+    # vo_alice_storage_dir: { type: str(), required: false, use_default: true}
+    # vo_alice_sw_dir: { type: str(), required: false, use_default: true}
+    # vo_alice_voms_servers: { type: str(), required: false, use_default: true}
+    # vo_alice_vomses: { type: str(), required: false, use_default: true}
+    # vo_alice_voms_ca_dn: { type: str(), required: false, use_default: true}
+    # dteam_group_enable: { type: str(), required: false, use_default: true}
+    # vo_dteam_sw_dir: { type: str(), required: false, use_default: true}
+    # vo_dteam_default_se: { type: str(), required: false, use_default: true}
+    # vo_dteam_storage_dir: { type: str(), required: false, use_default: true}
+    # vo_dteam_voms_servers: { type: str(), required: false, use_default: true}
+    # vo_dteam_vomses: { type: str(), required: false, use_default: true}
+    # vo_dteam_voms_ca_dn: { type: str(), required: false, use_default: true}
+    # ops_group_enable: { type: str(), required: false, use_default: true}
+    # vo_ops_sw_dir: { type: str(), required: false, use_default: true}
+    # vo_ops_default_se: { type: str(), required: false, use_default: true}
+    # vo_ops_storage_dir: { type: str(), required: false, use_default: true}
+    # vo_ops_vomses: { type: str(), required: false, use_default: true}
+    # vo_ops_voms_ca_dn: { type: str(), required: false, use_default: true}
+    # vo_ops_voms_servers: { type: str(), required: false, use_default: true}
