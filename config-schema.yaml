@@ -5,9 +5,9 @@ available-from-site-level-config:
     bdii_host: { type: str(), required: false, use_default: true}
     vos: { type: yaml_object(), required: true, use_default: false }
 expected-from-site-level-config:
-    wn_list: { type: str(), required: false, use_default: true}
-    users_conf: { type: str(), required: false, use_default: true}
-    groups_conf: { type: str(), required: false, use_default: true}
+    #wn_list: { type: str(), required: false, use_default: true}
+    #users_conf: { type: str(), required: false, use_default: true}
+    #groups_conf: { type: str(), required: false, use_default: true}
     px_host: { type: str(), required: false, use_default: true}
     ce_host: { type: str(), required: false, use_default: true}
     ce_smpsize: { type: str(), required: false, use_default: true}
