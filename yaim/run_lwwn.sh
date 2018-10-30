@@ -71,6 +71,10 @@ echo  "Running docker run with this parameters:
 	CE Node: ${NODES[0]}
 	Docker Network Name: $NET
     "
+
+CENODE=`echo ${NODES[0]} | cut -d ":" -f 1`
+sed -i "s/CE_HOST=my-test-ce.cern.ch/CE_HOST=${CENODE}/g" $CONFIG/wn-info.def
+
 for NODE in ${NODES[@]:1}; do
 	echo "Node hostame and IP= $NODE"
 	WNODE=`echo $NODE | cut -d ":" -f 1`
