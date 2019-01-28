@@ -9,25 +9,20 @@ default_var_prefix: "pbs_default_var"
 runtime_vars:
   - pbs_runtime_var_ce_host
   - pbs_runtime_var_queues
-host_requirements: {
- "firewall": [
-  {
-    ports: "[22, 8080]",
-    protocol: tcp,
-    action: accept,
-    ipv6: true
-  }, 
-  {
-    ports: "[6543]",
-    protocol: tcp,
-    action: accept,
-    ipv6: false
-  }
- ],
+host_requirements:
+ "firewall":
+    - ports: "[22, 8080]"
+      protocol: tcp
+      action: accept
+      ipv6: true 
+ 
+    - ports: "[6543]"
+      protocol: tcp
+      action: accept
+      ipv6: false
  "cvmfs": true
- }
+ 
  docker_run_parameters:
- {
-  "privileged": true,
+  "privileged": true
   "mount": "ce-cream" 
- }
+
