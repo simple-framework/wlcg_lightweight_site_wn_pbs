@@ -11,12 +11,12 @@ runtime_vars:
   - pbs_runtime_var_queues
 host_requirements:
  "firewall":
-    - ports: "[22, 8080]"
+    - ports: 8080
       protocol: tcp
       action: accept
       ipv6: true 
  
-    - ports: "[6543]"
+    - ports: 6543
       protocol: tcp
       action: accept
       ipv6: false
