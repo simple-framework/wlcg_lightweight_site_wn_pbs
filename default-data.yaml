@@ -11,7 +11,7 @@ wn-pbs-expected-from-site-level-config:
     pbs_default_var_ce_close_se: &pbs_default_var_ce_close_se SE3
     pbs_default_var_ce_close_se3_access_point: &pbs_default_var_ce_close_se3_access_point /not/used
     pbs_default_var_ce_close_se3_host: &pbs_default_var_ce_close_se3_host not-used.some-domain
-    pbs_default_var_se_list: &pbs_default_var_se_list str()
+    pbs_default_var_se_list: &pbs_default_var_se_list
       - *pbs_default_var_ce_close_se3_host
     pbs_default_var_se_mount_info_list: &pbs_default_var_se_mount_info_list none
     pbs_default_var_vo_sw_dir: &pbs_default_var_vo_sw_dir /opt/exp_soft
