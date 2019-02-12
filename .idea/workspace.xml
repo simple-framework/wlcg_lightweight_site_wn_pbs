@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d78357cf-ab02-4d38-b026-765827ef7e5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/categories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/categories/cream_info_advanced.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/categories/cream_info_queried.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/categories/cream_info_static.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/categories/wn_info_queried.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/categories/wn_info_static.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/init.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/models/config_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/models/parameter_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/pre_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yaim/pre_config/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,9 +124,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2065" />
-    <option name="y" value="181" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1920" />
+    <option name="y" value="45" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
