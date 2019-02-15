@@ -1,5 +1,6 @@
 #General Component Desciption
 component : "WN-Pbs"
+type: worker_node
 version : 2.5.13
 docker_hub_url : ""
 primary_config_key: "pbs-info"
