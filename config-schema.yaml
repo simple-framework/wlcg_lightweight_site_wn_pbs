@@ -1,13 +1,5 @@
 ---
-available-from-site-level-config:
-    site_name: { type: str(), required: false, use_default: true}
-    site_email: { type: str(), required: false, use_default: true}
-    bdii_host: { type: str(), required: false, use_default: true}
-    vos: { type: yaml_object(), required: true, use_default: false }
 expected-from-site-level-config:
-    #wn_list: { type: str(), required: false, use_default: true}
-    #users_conf: { type: str(), required: false, use_default: true}
-    #groups_conf: { type: str(), required: false, use_default: true}
     px_host: { type: str(), required: false, use_default: true}
     ce_host: { type: str(), required: false, use_default: true}
     ce_smpsize: { type: str(), required: false, use_default: true}
@@ -17,26 +9,4 @@ expected-from-site-level-config:
     ce_close_se3_host: { type: str(), required: false, use_default: true}
     se_list: { type: str(), required: false, use_default: true}
     se_mount_info_list: { type: str(), required: false, use_default: true}
-    queues: { type: str(), required: false, use_default: false}
-    # alice_group_enable: { type: str(), required: false, use_default: true}
-    # vo_alice_default_se: { type: str(), required: false, use_default: true}
-    # vo_alice_queues: { type: str(), required: false, use_default: true}
-    # vo_alice_storage_dir: { type: str(), required: false, use_default: true}
-    # vo_alice_sw_dir: { type: str(), required: false, use_default: true}
-    # vo_alice_voms_servers: { type: str(), required: false, use_default: true}
-    # vo_alice_vomses: { type: str(), required: false, use_default: true}
-    # vo_alice_voms_ca_dn: { type: str(), required: false, use_default: true}
-    # dteam_group_enable: { type: str(), required: false, use_default: true}
-    # vo_dteam_sw_dir: { type: str(), required: false, use_default: true}
-    # vo_dteam_default_se: { type: str(), required: false, use_default: true}
-    # vo_dteam_storage_dir: { type: str(), required: false, use_default: true}
-    # vo_dteam_voms_servers: { type: str(), required: false, use_default: true}
-    # vo_dteam_vomses: { type: str(), required: false, use_default: true}
-    # vo_dteam_voms_ca_dn: { type: str(), required: false, use_default: true}
-    # ops_group_enable: { type: str(), required: false, use_default: true}
-    # vo_ops_sw_dir: { type: str(), required: false, use_default: true}
-    # vo_ops_default_se: { type: str(), required: false, use_default: true}
-    # vo_ops_storage_dir: { type: str(), required: false, use_default: true}
-    # vo_ops_vomses: { type: str(), required: false, use_default: true}
-    # vo_ops_voms_ca_dn: { type: str(), required: false, use_default: true}
-    # vo_ops_voms_servers: { type: str(), required: false, use_default: true}
+    queues: { type: queue(), required: false, use_default: false}

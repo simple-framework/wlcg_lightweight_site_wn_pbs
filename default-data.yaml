@@ -1,7 +1,4 @@
 wn-pbs-expected-from-site-level-config:
-    #pbs_default_var_wn_list: &pbs_default_var_wn_list /root/wn-list.conf #SET
-    #pbs_default_var_users_conf: &pbs_default_var_users_conf /root/users.conf #SET
-    #pbs_default_var_groups_conf: &pbs_default_var_groups_conf /root/groups.conf #SET
     pbs_default_var_px_host: &pbs_default_var_px_host myproxy.cern.ch
     pbs_default_var_ce_host: &pbs_default_var_ce_host
       __from__: *pbs_runtime_var_ce_host
@@ -14,5 +11,3 @@ wn-pbs-expected-from-site-level-config:
     pbs_default_var_se_list: &pbs_default_var_se_list
       __from__: *pbs_default_var_ce_close_se3_host
     pbs_default_var_se_mount_info_list: &pbs_default_var_se_mount_info_list none
-    pbs_default_var_queues: &pbs_default_var_queues
-      __from__: *pbs_runtime_var_queues

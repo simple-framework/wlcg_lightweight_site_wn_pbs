@@ -8,7 +8,6 @@ site_level_config_version: 1.0
 default_var_prefix: "pbs_default_var"
 runtime_vars:
   - pbs_runtime_var_ce_host
-  - pbs_runtime_var_queues
 host_requirements:
  "firewall":
     - ports: 8080
