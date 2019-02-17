@@ -1,2 +1,71 @@
 WN_LIST="/root/wn-list.conf"
+USERS_CONF="/root/users.conf"
+GROUPS_CONF="/root/groups.conf"
+VO_SW_DIR="/opt/exp_soft"
 SITE_NAME="simple-dev-site"
+SITE_EMAIL="mayank.sharma@cern.ch"
+BDII_HOST="bdii.cern.ch"
+PX_HOST="myproxy.cern.ch"
+CE_HOST="lightweight_component02.cern.ch"
+CE_SMPSIZE="8"
+BATCH_SERVER="lightweight_component02.cern.ch"
+CE_CLOSE_SE="SE3"
+CE_CLOSE_SE3_ACCESS_POINT="/not/used"
+CE_CLOSE_SE3_HOST="not-used.some-domain"
+SE_LIST="not-used.some-domain"
+SE_MOUNT_INFO_LIST="none"
+VO_ALICE_DEFAULT_SE="not_used.some-domain"
+VO_ALICE_SW_DIR="."
+VO_ALICE_STORAGE_DIR="/not/used"
+VO_ALICE_VOMS_SERVERS="\ 
+'vomss://voms2.cern.ch:8443/voms/alice?/alice' \ 
+'vomss://lcg-voms2.cern.ch:8443/voms/alice?/alice' \ 
+"
+VO_ALICE_VOMSES="\ 
+alice voms2.cern.ch 15000 \ 
+/DC=ch/DC=cern/OU=computers/CN=voms2.cern.ch alice 24 \ 
+alice lcg-voms2.cern.ch 15000 \ 
+/DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch alice 24 \ 
+"
+VO_ALICE_CA_DN="\ 
+/DC=ch/DC=cern/CN=CERN Grid Certification Authority \ 
+/DC=ch/DC=cern/CN=CERN Grid Certification Authority \ 
+"
+VO_DTEAM_DEFAULT_SE="not_used.some-domain"
+VO_DTEAM_SW_DIR="."
+VO_DTEAM_STORAGE_DIR="/storage/dteam"
+VO_DTEAM_VOMS_SERVERS="\ 
+'vomss://voms2.cern.ch:8443/voms/dteam?/dteam' \ 
+'vomss://lcg-voms2.cern.ch:8443/voms/dteam?/dteam' \ 
+"
+VO_DTEAM_VOMSES="\ 
+dteam voms2.cern.ch 15001 \ 
+/DC=ch/DC=cern/OU=computers/CN=voms2.cern.ch dteam 24 \ 
+dteam lcg-voms2.cern.ch 15001 \ 
+/DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch dteam 24 \ 
+"
+VO_DTEAM_CA_DN="\ 
+/DC=ch/DC=cern/CN=CERN Grid Certification Authority \ 
+/DC=ch/DC=cern/CN=CERN Grid Certification Authority \ 
+"
+VO_OPS_DEFAULT_SE="not_used.some-domain"
+VO_OPS_SW_DIR="."
+VO_OPS_STORAGE_DIR="/storage/ops"
+VO_OPS_VOMS_SERVERS="\ 
+'vomss://voms2.cern.ch:8443/voms/ops?/ops' \ 
+'vomss://lcg-voms2.cern.ch:8443/voms/ops?/ops' \ 
+"
+VO_OPS_VOMSES="\ 
+ops voms2.cern.ch 15009 \ 
+/DC=ch/DC=cern/OU=computers/CN=voms2.cern.ch ops 24 \ 
+ops lcg-voms2.cern.ch 15009 \ 
+/DC=ch/DC=cern/OU=computers/CN=lcg-voms2.cern.ch ops 24 \ 
+"
+VO_OPS_CA_DN="\ 
+/DC=ch/DC=cern/CN=CERN Grid Certification Authority \ 
+/DC=ch/DC=cern/CN=CERN Grid Certification Authority \ 
+"
+VOS="alice dteam ops"
+ALICE_GROUP_ENABLE="alice /alice /alice/ROLE=lcgadmin"
+DTEAM_GROUP_ENABLE="dteam /dteam /dteam/ROLE=lcgadmin"
+OPS_GROUP_ENABLE="ops /ops /ops/ROLE=lcgadmin"

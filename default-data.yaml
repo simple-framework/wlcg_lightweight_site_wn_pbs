@@ -14,6 +14,5 @@ wn-pbs-expected-from-site-level-config:
     pbs_default_var_se_list: &pbs_default_var_se_list
       __from__: *pbs_default_var_ce_close_se3_host
     pbs_default_var_se_mount_info_list: &pbs_default_var_se_mount_info_list none
-    pbs_default_var_vo_sw_dir: &pbs_default_var_vo_sw_dir /opt/exp_soft
     pbs_default_var_queues: &pbs_default_var_queues
       __from__: *pbs_runtime_var_queues

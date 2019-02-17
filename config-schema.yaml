@@ -17,8 +17,7 @@ expected-from-site-level-config:
     ce_close_se3_host: { type: str(), required: false, use_default: true}
     se_list: { type: str(), required: false, use_default: true}
     se_mount_info_list: { type: str(), required: false, use_default: true}
-    vo_sw_dir: { type: str(), required: false, use_default: true}
-    queues: { type: str(), required: false, use_default: true}
+    queues: { type: str(), required: false, use_default: false}
     # alice_group_enable: { type: str(), required: false, use_default: true}
     # vo_alice_default_se: { type: str(), required: false, use_default: true}
     # vo_alice_queues: { type: str(), required: false, use_default: true}
