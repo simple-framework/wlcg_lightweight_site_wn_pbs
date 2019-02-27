@@ -44,7 +44,7 @@ RUN yum -y install \
 RUN ln -s /var/spool/pbs /var/lib/torque
 
 # Mount Volume for configuration parameters
-VOLUME /wn-config
+VOLUME /config
 
 # init script on launch
 #ENTRYPOINT ["/wn-config/init.sh"]

@@ -73,10 +73,10 @@ for NODE in ${NODES[@]}; do
     DOCKER_RUN="$DOCKER_RUN --add-host ${NODE}"
 done
 DOCKER_RUN="$DOCKER_RUN --privileged"
-DOCKER_RUN="$DOCKER_RUN --mount type=bind,source="$(pwd)"/wn-config,target=/wn-config"
+DOCKER_RUN="$DOCKER_RUN --mount type=bind,source="$(pwd)"/config,target=/config"
 DOCKER_RUN="$DOCKER_RUN maany/lwwn-umd4 /bin/bash"
 
 echo "The following docker command will be executed:"
 echo $DOCKER_RUN
 $DOCKER_RUN
-sudo docker exec -it lwwn-umd4 /wn-config/init.sh
+sudo docker exec -it lwwn-umd4 /config/init.sh
