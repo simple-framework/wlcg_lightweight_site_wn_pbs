@@ -598,12 +598,21 @@ default_pool_account_opssgm:
 default_group_dteam_name: dteam
 
 dns:
-- hostname: lightweight_component01.cern.ch
-  ip: 10.0.0.1
+- container_fqdn: lightweight_component01.cern.ch
+  host_fqdn: lightweight_component01.cern.ch
+  host_ip: 188.184.104.25
+  container_ip: 10.0.0.10
   type: compute_element
-- hostname: WN-Pbs_0_lightweight_component02_1_cern.ch
-  ip: 10.0.0.2
+  execution_id: 0
+- container_fqdn: WN-Pbs_lightweight_component02_1.cern.ch
+  host_fqdn: lightweight_component02.cern.ch
+  host_ip: 188.184.30.19
+  container_ip: 10.0.0.11
   type: worker_node
-- hostname: WN-Pbs_1_lightweight_component02_1_cern.ch
-  ip: 10.0.0.3
+  execution_id: 1
+- container_fqdn: WN-Pbs_lightweight_component02_2.cern.ch
+  host_fqdn: lightweight_component02.cern.ch
+  host_ip: 188.184.30.19
+  container_ip: 10.0.0.12
   type: worker_node
+  execution_id: 2

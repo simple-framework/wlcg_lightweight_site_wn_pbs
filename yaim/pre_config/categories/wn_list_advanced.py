@@ -6,6 +6,6 @@ def get(data):
     hostnames = []
     for dns in dns_info:
         if dns['type'] == 'worker_node':
-            hostnames.append(dns['hostname'])
-            advanced_category.add(dns['hostname'] + "\n")
+            hostnames.append(dns['container_fqdn'])
+            advanced_category.add(dns['container_fqdn'] + "\n")
     return [advanced_category]
