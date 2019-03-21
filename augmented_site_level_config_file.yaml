@@ -8,7 +8,6 @@ meta_info_wn-pbs:
   default_var_prefix: pbs_default_var
   runtime_vars:
   - pbs_runtime_var_ce_host
-  - pbs_runtime_var_queues
   host_requirements:
     firewall:
     - ports: 8080
@@ -57,7 +56,6 @@ site:
   use_argus: false
 cream_runtime_variables:
 - lightweight_component01.cern.ch
-- alice
 lightweight_components:
 - lifecycle_hooks:
     pre_config:
@@ -87,7 +85,6 @@ lightweight_components:
     ce_os_arch: str()
     apel_mysql_host: lightweight_component01.cern.ch
     ce_otherdescr: Cores=4
-    supported_vos: Ignore
     cream_db_user: str()
     ce_sf00: 0
     ce_minphysmem: 2000
@@ -163,6 +160,8 @@ lightweight_components:
     ce_close_se3_host: not-used.some-domain
     se_mount_info_list: none
   repository_revision: master
+  supplemental_config:
+    some_additional_parameter: some_value
   repository_url: https://github.com/WLCG-Lightweight-Sites/wlcg_lightweight_site_ce_cream
   type: compute_element
   execution_id: 0
@@ -182,16 +181,17 @@ lightweight_components:
     container_count: 1
   config:
     px_host: myproxy.cern.ch
-    batch_server: lightweight_component02.cern.ch
+    batch_server: pbs
     ce_smpsize: 8
     ce_close_se3_access_point: /not/used
-    ce_host: lightweight_component02.cern.ch
+    ce_host: lightweight_component01.cern.ch
     ce_close_se: SE3
     se_list: not-used.some-domain
     ce_close_se3_host: not-used.some-domain
     se_mount_info_list: none
-    vo_sw_dir: /opt/exp_soft
   repository_revision: master
+  supplemental_config:
+    some_additional_parameter: some_value
   repository_url: https://github.com/WLCG-Lightweight-Sites/wlcg_lightweight_site_wn_pbs
   type: worker_node
   execution_id: 1
@@ -241,8 +241,7 @@ default_group_ops:
   name: ops
 default_group_alicesgm_name: alicesgm
 pbs_runtime_variables:
-- lightweight_component02.cern.ch
-- alice
+- lightweight_component01.cern.ch
 site_infrastructure:
 - fqdn: lightweight_component01.cern.ch
   ip_address: 192.168.0.4
@@ -514,7 +513,6 @@ meta_info_cream-ce:
   default_var_prefix: cream_default_var
   runtime_vars:
   - cream_runtime_var_ce_host
-  - cream_runtime_var_queues
   host_requirements:
     firewall:
     - ports: 22
@@ -541,15 +539,14 @@ default_pool_account_ops:
   secondary_groups: []
 wn-pbs-expected-from-site-level-config:
   pbs_default_var_px_host: myproxy.cern.ch
-  pbs_default_var_ce_host: lightweight_component02.cern.ch
+  pbs_default_var_ce_host: lightweight_component01.cern.ch
   pbs_default_var_ce_smpsize: 8
-  pbs_default_var_batch_server: lightweight_component02.cern.ch
+  pbs_default_var_batch_server: lightweight_component01.cern.ch
   pbs_default_var_ce_close_se: SE3
   pbs_default_var_ce_close_se3_access_point: /not/used
   pbs_default_var_ce_close_se3_host: not-used.some-domain
   pbs_default_var_se_list: not-used.some-domain
   pbs_default_var_se_mount_info_list: none
-  pbs_default_var_vo_sw_dir: /opt/exp_soft
 default_group_alice:
   gid: 1395
   name: alice
@@ -599,6 +596,7 @@ default_pool_account_opssgm:
   - gid: 46001
     name: opssgm
 default_group_dteam_name: dteam
+
 dns:
 - hostname: lightweight_component01.cern.ch
   ip: 10.0.0.1

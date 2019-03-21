@@ -3,25 +3,15 @@ component : "WN-Pbs"
 type: worker_node
 version : 2.5.13
 docker_hub_url : ""
-primary_config_key: "pbs-info"
 site_level_config_version: 1.0
-default_var_prefix: "pbs_default_var"
+default_var_prefix: pbs_default_var
 runtime_vars:
   - pbs_runtime_var_ce_host
-host_requirements:
- "firewall":
-    - ports: 8080
-      protocol: tcp
-      action: accept
-      ipv6: true 
- 
-    - ports: 6543
-      protocol: tcp
-      action: accept
-      ipv6: false
- "cvmfs": true
- 
+
 docker_run_parameters:
-  "privileged": true
-  "mount": "wn-pbs" 
+  privileged: true
+  tty: true
+  detached: true
+  command: /bin/bash
+
 
