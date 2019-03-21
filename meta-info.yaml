@@ -13,5 +13,3 @@ docker_run_parameters:
   tty: true
   detached: true
   command: /bin/bash
-
-
