@@ -2,7 +2,7 @@
 component : "WN-Pbs"
 type: worker_node
 version : 2.5.13
-docker_hub_url : ""
+docker_hub_tag : ""
 site_level_config_version: 1.0
 default_var_prefix: pbs_default_var
 runtime_vars:
