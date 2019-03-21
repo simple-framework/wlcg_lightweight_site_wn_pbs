@@ -7,6 +7,8 @@ cp /etc/simple_grid/config/users.conf /root/
 cp /etc/simple_grid/config/groups.conf /root/
 cp /etc/simple_grid/config/wn-list.conf /root/
 
+service rsyslog start
+
 # run YAIM
 echo "Starting YAIM..."
 /opt/glite/yaim/bin/yaim -c \
@@ -17,4 +19,4 @@ echo "Starting YAIM..."
 # start daemons
 service sshd start
 service crond start
-#service autofs start
+
