@@ -8,6 +8,6 @@ def get(data, id):
     for config in voms_config:
         voms_fqan = config['voms_fqan']
         flag = config['comment'] if 'comment' in config else ''
-        groups_string = "{voms_fqan}:::{flag}:".format(voms_fqan=voms_fqan, flag=flag)
+        groups_string = "\"{voms_fqan}\":::{flag}:".format(voms_fqan=voms_fqan, flag=flag)
         advanced_category.add(groups_string + "\n")
     return [advanced_category]

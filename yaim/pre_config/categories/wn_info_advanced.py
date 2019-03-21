@@ -29,7 +29,7 @@ def append_vo_data(advanced_category, component_section, data):
         advanced_category.add_key_value("vo_" + vo_name_param + "_voms_servers",
                                         "\\ \n{0} \\ \n".format(" \\ \n".join(voms_servers)))
         advanced_category.add_key_value("vo_" + vo_name_param + "_vomses", "\\ \n{0} \\ \n".format(" \\ \n".join(vomses)))
-        advanced_category.add_key_value("vo_" + vo_name_param + "_ca_dn", "\\ \n{0} \\ \n".format(" \\ \n".join(ca_dns)))
+        advanced_category.add_key_value("vo_" + vo_name_param + "_voms_ca_dn", "\\ \n{0} \\ \n".format(" \\ \n".join(ca_dns)))
     advanced_category.add_key_value("vos", ' '.join(vos))
     return advanced_category
 
