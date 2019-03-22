@@ -19,4 +19,5 @@ echo "Starting YAIM..."
 # start daemons
 service sshd start
 service crond start
-
+# add ce to known-hosts file
+/usr/sbin/edg-pbs-knownhosts
