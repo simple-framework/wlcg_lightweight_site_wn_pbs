@@ -5,7 +5,7 @@ engine = yaql.YaqlFactory().create()
 
 def get_component_section(data, id):
     for component in data['lightweight_components']:
-        if component['id'] is int(id):
+        if component['execution_id'] is int(id):
             return component
 
 def evaluate(data, query):
