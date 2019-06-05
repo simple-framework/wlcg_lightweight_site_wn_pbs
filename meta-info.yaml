@@ -2,14 +2,16 @@
 component : "WN-Pbs"
 type: worker_node
 version : 2.5.13
-docker_hub_tag : ""
 site_level_config_version: 1.0
 default_var_prefix: pbs_default_var
 runtime_vars:
   - pbs_runtime_var_ce_host
 
-docker_run_parameters:
-  privileged: true
-  tty: true
-  detached: true
-  command: /bin/bash
+level_2_configurators:
+  yaim:
+    docker_run_parameters:
+      privileged: true
+      tty: true
+      detached: true
+      command: /bin/bash
+    docker_hub_tag: "maany/lwwn-umd4"
