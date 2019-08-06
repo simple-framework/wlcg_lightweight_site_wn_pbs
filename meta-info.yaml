@@ -7,6 +7,9 @@ default_var_prefix: pbs_default_var
 runtime_vars:
   - pbs_runtime_var_ce_host
 
+host_requirements:
+  cvmfs: true
+
 level_2_configurators:
   yaim:
     docker_run_parameters:

@@ -6,7 +6,6 @@ from categories import wn_info_static, wn_info_queried, wn_info_advanced, \
     users_advanced, \
     wn_list_advanced
 
-
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--site_config', help="Compiled Site Level Configuration YAML file")
@@ -41,6 +40,7 @@ def get_wn_list_file_categories(data):
     return advanced
 
 
+
 if __name__ == "__main__":
     args = parse_args()
     execution_id = args['execution_id']
@@ -56,6 +56,7 @@ if __name__ == "__main__":
     users_conf_file = ConfigFile(output_dir + '/users.conf', data)
     wn_list_file = ConfigFile(output_dir + '/wn-list.conf', data)
 
+
     wn_info_file.add_categories(get_wn_info_file_categories(data, execution_id))
     groups_conf_file.add_categories(get_groups_conf_file_categories(data, execution_id))
     users_conf_file.add_categories(get_users_conf_file_categories(data, execution_id))
@@ -65,3 +66,4 @@ if __name__ == "__main__":
     groups_conf_file.generate_output_file()
     users_conf_file.generate_output_file()
     wn_list_file.generate_output_file()
+
