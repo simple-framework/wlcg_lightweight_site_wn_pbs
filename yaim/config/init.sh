@@ -9,6 +9,10 @@ cp /etc/simple_grid/config/wn-list.conf /root/
 
 service rsyslog start
 
+# start daemons
+service sshd start
+service crond start
+
 # run YAIM
 echo "Starting YAIM..."
 /opt/glite/yaim/bin/yaim -c \
@@ -16,8 +20,6 @@ echo "Starting YAIM..."
 	-n WN \
 	-n TORQUE_client
 
-# start daemons
-service sshd start
-service crond start
+
 # add ce to known-hosts file
 /usr/sbin/edg-pbs-knownhosts

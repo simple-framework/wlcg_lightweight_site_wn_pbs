@@ -16,5 +16,4 @@ level_2_configurators:
       privileged: true
       tty: true
       detached: true
-      command: /bin/bash
     docker_hub_tag: "maany/lwwn-umd4"

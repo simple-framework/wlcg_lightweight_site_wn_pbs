@@ -43,8 +43,5 @@ RUN yum -y install \
 
 RUN ln -s /var/spool/pbs /var/lib/torque
 
-# Mount Volume for configuration parameters
-VOLUME /config
-
 # init script on launch
-#ENTRYPOINT ["/wn-config/init.sh"]
+CMD service sshd start && tail -F /var/log/messages
