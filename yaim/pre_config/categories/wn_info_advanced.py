@@ -21,8 +21,8 @@ def append_vo_data(advanced_category, component_section, data):
         ca_dns = []
         for server in vo['servers']:
             voms_servers.append("'vomss://" + server['server'] + ":8443" + "/voms/" + vo_name + "?/" + vo_name + "'")
-            vomses.append("{vo_name} {server} {port} \ \n{dn} {vo_name} 24".format(vo_name=vo_name, server=server['server'], port=server['port'], dn=server['dn']))
-            ca_dns.append("{ca_dn}".format(ca_dn=server['ca_dn']))
+            vomses.append("'{vo_name} {server} {port} \ \n{dn} {vo_name} 24'".format(vo_name=vo_name, server=server['server'], port=server['port'], dn=server['dn']))
+            ca_dns.append("'{ca_dn}'".format(ca_dn=server['ca_dn']))
         advanced_category.add_key_value("vo_" + vo_name_param + "_default_se", vo['default_se'])
         advanced_category.add_key_value("vo_" + vo_name_param + "_sw_dir", vo['sw_dir'])
         advanced_category.add_key_value("vo_" + vo_name_param + "_storage_dir", vo['storage_dir'])
