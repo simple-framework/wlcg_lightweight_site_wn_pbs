@@ -2,7 +2,9 @@
 component : "WN-Pbs"
 type: worker_node
 version : 2.5.13
-site_level_config_version: 1.0
+supported_simple_framework_core_version:
+  minimum: 1.0
+  maximum: 2.0
 default_var_prefix: pbs_default_var
 runtime_vars:
   - pbs_runtime_var_ce_host
@@ -16,4 +18,4 @@ level_2_configurators:
       privileged: true
       tty: true
       detached: true
-    docker_hub_tag: "maany/lwwn-umd4"
+    docker_hub_tag: "maany/simple_grid_torque_worker_node:1.0.0"

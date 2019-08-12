@@ -1,3 +1,6 @@
+This README is deprecated in favor of automatic installation and configuration performed by the simple_grid_puppet_module.
+
+
 # Introduction
 
 This folder contains the code and resources required to 
