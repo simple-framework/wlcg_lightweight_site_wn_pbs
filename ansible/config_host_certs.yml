@@ -1,0 +1,17 @@
+- name: config_host_certs
+  
+  - file:
+      path: "{{ X509_HOST_KEY }}"
+      mode: 400
+      failed_when: "yaimlog ERROR "X509_HOST_KEY file in ${X509_HOST_KEY} not found !""
+
+  - file:
+      path: "{{ X509_HOST_CERT }}"
+      mode: 644
+      failed_when: "yaimlog ERROR "X509_HOST_CERT file in ${X509_HOST_CERT} not found"
+
+  - openssl_certificate:
+      path: "{{ X509_HOST_CERT }}"
+      failed_when: "Hostcert has expired!"
+
+  

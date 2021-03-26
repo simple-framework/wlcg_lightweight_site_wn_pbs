@@ -1,0 +1,33 @@
+- name: config_vomses
+  - file:
+      state: absent
+      path: "{{ INSTALL_ROOT }}/edg/edg/etc/vomses"
+  
+  - file:
+      state: absent
+      path: "{{ INSTALL_ROOT }}/glite/etc/vomses"
+
+  - file:
+      state: present
+      path: /etc/vomses
+  
+  - file:
+      path: /etc/vomses
+      mode: 0755
+
+  - block:
+      - shell: yaimlog ERROR "VOMSES parameter for VO '$vo' has too few fields"
+        when: "{{ gt }} == """
+
+      - shell: yaimlog ERROR "VOMSES parameter for VO '$vo' has too few fields"
+        when: "{{ alias }} == "" or {{ dn }} == """
+    with_items: "{{ VOS }}"
+
+      - shell: yaimlog ERROR "VOMSES parameter for VO '$vo' has incorrect DN or alias"
+        when: "x{{ alias }} != x{{ alias }}/\/"
+
+  - shell: "echo {{ nickname }} {{ server }} {{ port }} {{ dn }} {{ alias }}"
+
+  - file:
+    path: "{{ filename }}"
+    mode: 644
